@@ -3,18 +3,28 @@ using System.Collections;
 
 public class Sound_Controller : MonoBehaviour {
 
+	// Create a singleton of the
 	public static Sound_Controller Instance  { get; private set; }
 
+	//Create Channels for sound effects
+	// Sound fx channel
 	public AudioSource SFX;
+	// Background Music Channel
 	public AudioSource Background_Music;
 
+	//Create array for each sound
+	// Health Damage
 	public AudioClip[] Health_Damge;
+	// Freeze
 	public AudioClip[] Freeze;
+	//Speed Up
 	public AudioClip[] Speed_Up;
+	// Background Music
 	public AudioClip[] Background_music;
 
 	// Use this for initialization
 	void Start () {
+		//Gives the attribues to the singleton
 		Instance = this;
 	}
 

@@ -3,22 +3,29 @@ using System.Collections;
 
 public class Character_Attributes : MonoBehaviour {
 
+	//Creates the character attributes and settings the intial values
+
+	//Create Character level
 	public int Level = 1;
+
+	//Create Character Attriubutes Base
 	public int Agility = 1;
 	public int Acuity = 1;
 	public int Health = 100;
-	public int stamina = 10;
-	
-	public float movement_speed = 5f;
+	public int Stamina = 10;
+
+	//Create Character Movement Speed Base
+	public float Movement_Speed = 5f;
 
 	// Use this for initialization
 	void Start () {
 
+		//Set Characters Attributes
 		Agility = Agility * Level;
 		Acuity = Acuity * Level;
 		Health = Health * Level;
-		stamina = stamina * Level;
-	
+		Stamina = Stamina * Level;
+			
 	}
 	
 	// Update is called once per frame
