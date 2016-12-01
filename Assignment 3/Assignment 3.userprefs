@@ -1,6 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character_Movement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Character_Attributes.cs" Line="5" Column="2" />
+      <File FileName="Assets/Scripts/Character_Movement.cs" Line="183" Column="11" />
+      <File FileName="Assets/Scripts/Level_Loader.cs" Line="10" Column="20" />
+      <File FileName="Assets/Scripts/Play_Music.cs" Line="28" Column="31" />
+      <File FileName="Assets/Scripts/Sound_Controller.cs" Line="35" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
