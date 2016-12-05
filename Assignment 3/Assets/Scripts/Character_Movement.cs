@@ -105,6 +105,7 @@ public class Character_Movement : MonoBehaviour {
 		{
 			// Level up the Player
 			Player.Level = Player.Level + 1;
+			Player.Level_Up = true;
 		}
 	}
 

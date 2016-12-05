@@ -13,6 +13,7 @@ public class Character_Attributes : MonoBehaviour {
 	public int Acuity = 1;
 	public int Health = 100;
 	public int Stamina = 10;
+	public bool Level_Up = false;
 
 	//Create Character Movement Speed Base
 	public float Movement_Speed = 5f;
@@ -31,5 +32,14 @@ public class Character_Attributes : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		if (Level_Up)
+		{
+			Agility = Agility * Level;
+			Acuity = Acuity * Level;
+			Health = Health * Level;
+			Stamina = Stamina * Level;
+			Level_Up = false;
+		}
+
 	}
 }
