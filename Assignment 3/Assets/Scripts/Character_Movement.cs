@@ -71,9 +71,8 @@ public class Character_Movement : MonoBehaviour {
 		// Check to see if collision with Health
 		if (collider.tag == "Health") 
 		{
-			//Damage Player Health
+
 			Player.Health = Player.Health - (10 * Player.Level);
-			// Set Health Count Down
 			Health_Count_Down = 1;
 			//Play sound for health damage
 			Sound_Controller.On_Health_Damage ();
@@ -85,19 +84,19 @@ public class Character_Movement : MonoBehaviour {
 			//Check to see player speed is not a maximum for Level
 			if (Player.Movement_Speed < (15 * Player.Level)) 
 			{
-				// increase speed
 				Player.Movement_Speed = Player.Movement_Speed + (5 * Player.Level);
 				//Play speed up sound
 				Sound_Controller.On_Speed_Up ();
+				Debug.Log( "Speed Tag Tester");
 			}
 		}
 		// Check to see if collision with Freeze
 		if (collider.tag == "Freeze") 
 		{
-			//Set player movement speed to zero
 			Player.Movement_Speed = 0;
 			//Play Freeze sound effect
 			Sound_Controller.On_Freeze ();
+			Debug.Log ( " Its freezing in here");
 			
 		}
 		// Check to see if collision with Level_Up

@@ -12,7 +12,7 @@ public class Character_Attributes : MonoBehaviour {
 	public int Agility = 1;
 	public int Acuity = 1;
 	public int Health = 100;
-	public int Stamina = 10;
+	public int Stamina = 20;
 	public bool Level_Up = false;
 
 	//Create Character Movement Speed Base
@@ -39,6 +39,9 @@ public class Character_Attributes : MonoBehaviour {
 			Health = Health * Level;
 			Stamina = Stamina * Level;
 			Level_Up = false;
+			Debug.Log ( "Its level up time");
+
+			Movement_Speed = Stamina/Agility + Acuity;
 		}
 
 	}
