@@ -1,12 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character_Attributes.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI_Manager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Character_Attributes.cs" Line="15" Column="25" />
       <File FileName="Assets/Scripts/Sound_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character_Movement.cs" Line="99" Column="41" />
-      <File FileName="Assets/Scripts/Level_Loader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Play_Music.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character_Movement.cs" Line="33" Column="54" />
+      <File FileName="Assets/UI_Manager.cs" Line="12" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
