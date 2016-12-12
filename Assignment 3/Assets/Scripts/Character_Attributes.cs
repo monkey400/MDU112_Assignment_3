@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Character_Attributes : MonoBehaviour {
 
+	public static Character_Attributes Instance;
+
+	void Awake()
+	{
+		Instance = this;
+	}
 	//Creates the character attributes and settings the intial values
 
 	//Create Character level
@@ -14,6 +20,9 @@ public class Character_Attributes : MonoBehaviour {
 	public int Health = 100;
 	public int Stamina = 20;
 	public bool Level_Up = false;
+
+	// Base Player Time
+	public float Game_Time = 120f;
 
 	//Create Character Movement Speed Base
 	public float Movement_Speed = 5f;
@@ -39,6 +48,7 @@ public class Character_Attributes : MonoBehaviour {
 			Health = Health * Level;
 			Stamina = Stamina * Level;
 			Level_Up = false;
+			Game_Time = Game_Time + 60;
 			Debug.Log ( "Its level up time");
 
 			Movement_Speed = Stamina/Agility + Acuity;

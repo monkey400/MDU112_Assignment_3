@@ -16,8 +16,6 @@ public class Character_Movement : MonoBehaviour {
 	public float Speed_Count_Down = 5;
 	//Set health count down
 	public float Health_Count_Down = 2;
-	// Set Game Time
-	public float Game_Time = 180;
 	// Music playing Bool
 	public bool Music_Playing = true;
 
@@ -31,6 +29,9 @@ public class Character_Movement : MonoBehaviour {
 		RB = gameObject.GetComponent<Rigidbody2D>();
 		// Set the player attributes
 		Player = FindObjectOfType<Character_Attributes> ();
+		UI_Manager.Instance.UpdateHealth();
+		UI_Manager.Instance.UpdateSpeed ();
+
 	}
 	
 	// Update is called once per frame
@@ -48,6 +49,8 @@ public class Character_Movement : MonoBehaviour {
 		Health_Check ();
 		// Runs the background music
 		Background_Music ();
+		//Update the Time Displayed
+		UI_Manager.Instance.UpdateTime ();
 
 	}
 
@@ -76,6 +79,7 @@ public class Character_Movement : MonoBehaviour {
 			Health_Count_Down = 1;
 			//Play sound for health damage
 			Sound_Controller.On_Health_Damage ();
+			UI_Manager.Instance.UpdateHealth();
 
 		}
 		// Check to see if collision with Speed
@@ -87,6 +91,7 @@ public class Character_Movement : MonoBehaviour {
 				Player.Movement_Speed = Player.Movement_Speed + (5 * Player.Level);
 				//Play speed up sound
 				Sound_Controller.On_Speed_Up ();
+				UI_Manager.Instance.UpdateSpeed();
 				Debug.Log( "Speed Tag Tester");
 			}
 		}
@@ -123,6 +128,7 @@ public class Character_Movement : MonoBehaviour {
 				Player.Health = Player.Health - (10 * Player.Level);
 				//Play sound for damage health
 				Sound_Controller.On_Health_Damage ();
+				UI_Manager.Instance.UpdateHealth();
 				// Reset Count down timer
 				Health_Count_Down = 1;
 			}
@@ -146,14 +152,15 @@ public class Character_Movement : MonoBehaviour {
 		{ 
 			//Set Player movement speed to original value
 			Player.Movement_Speed = 5f;
+			UI_Manager.Instance.UpdateSpeed();
 			//Reset Count Down Timer
 			Speed_Count_Down = 5;
 		}
 
 			// Game Timer
-			Game_Time -= Time.deltaTime;
+			Player.Game_Time -= Time.deltaTime;
 			//	Check if Game_Timer is below zero
-			if (Game_Time <=0)
+			if (Player.Game_Time <=0)
 		{
 			// Load Lost game scene
 			Application.LoadLevel("You_Lost");
